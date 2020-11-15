@@ -4,30 +4,16 @@
     /// Required designer variable.
     /// </summary>
     private System.ComponentModel.IContainer components = null;
-    private System.EventHandler buttonClickEventHandler;
 
     /// <summary>
     /// Clean up any resources being used.
     /// </summary>
     /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-    protected override void Dispose(bool disposing)
-    {
-      //ensure old button on click events are not carried over between battles 
-      this.btnAttack.Click -= buttonClickEventHandler;
-      
+    protected override void Dispose(bool disposing) {
       if (disposing && (components != null)) {
         components.Dispose();
       }
       base.Dispose(disposing);
-    }
-
-    /// <summary>
-    /// Replace text in battleInfoTextBox
-    /// </summary>
-    /// <param name="newText">string to override the currrent text displayed in battleInfoTextBox (can be empty string too).</param>
-    protected void SetBattleInfoTextBox(string newText)
-    {
-      this.battleInfoTextBox.Text = newText;
     }
 
     #region Windows Form Designer generated code
@@ -47,7 +33,6 @@
       this.picEnemy = new System.Windows.Forms.PictureBox();
       this.picPlayer = new System.Windows.Forms.PictureBox();
       this.tmrFinalBattle = new System.Windows.Forms.Timer(this.components);
-      this.battleInfoTextBox = new System.Windows.Forms.TextBox();
       ((System.ComponentModel.ISupportInitialize)(this.picBossBattle)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picEnemy)).BeginInit();
       ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).BeginInit();
@@ -62,8 +47,7 @@
       this.btnAttack.TabIndex = 2;
       this.btnAttack.Text = "Attack";
       this.btnAttack.UseVisualStyleBackColor = true;
-      buttonClickEventHandler = new System.EventHandler(this.btnAttack_Click);
-      this.btnAttack.Click += buttonClickEventHandler;
+      this.btnAttack.Click += new System.EventHandler(this.btnAttack_Click);
       // 
       // lblPlayerHealthFull
       // 
@@ -143,17 +127,6 @@
       this.tmrFinalBattle.Interval = 5600;
       this.tmrFinalBattle.Tick += new System.EventHandler(this.tmrFinalBattle_Tick);
       // 
-      // battleInfoTextBox
-      // 
-      this.battleInfoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-      this.battleInfoTextBox.Location = new System.Drawing.Point(128, 500);
-      this.battleInfoTextBox.Name = "battleInfoTextBox";
-      this.battleInfoTextBox.Size = new System.Drawing.Size(512, 80);
-      this.battleInfoTextBox.Multiline = true;
-      this.battleInfoTextBox.TabIndex = 2;
-      this.battleInfoTextBox.Text = "";
-      this.battleInfoTextBox.Enabled = false;
-      // 
       // FrmBattle
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -169,7 +142,6 @@
       this.Controls.Add(this.btnAttack);
       this.Controls.Add(this.picEnemy);
       this.Controls.Add(this.picPlayer);
-      this.Controls.Add(this.battleInfoTextBox);
       this.DoubleBuffered = true;
       this.Name = "FrmBattle";
       this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -178,6 +150,7 @@
       ((System.ComponentModel.ISupportInitialize)(this.picEnemy)).EndInit();
       ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).EndInit();
       this.ResumeLayout(false);
+
     }
 
     #endregion
@@ -191,7 +164,5 @@
     private System.Windows.Forms.Label lblEnemyHealthFull;
     private System.Windows.Forms.PictureBox picBossBattle;
     private System.Windows.Forms.Timer tmrFinalBattle;
-    //battle info includes stating an atttack is being used, indicating the battle ended, etc.
-    private System.Windows.Forms.TextBox battleInfoTextBox;
   }
 }
