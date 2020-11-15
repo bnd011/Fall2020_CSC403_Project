@@ -5,7 +5,8 @@ using System.Windows.Forms;
 
 
 namespace Fall2020_CSC403_Project {
-  public partial class FrmLevel : Form {
+  public partial class FrmLevel : Form 
+  {
     private Player player;
 
     private Enemy enemy1;
@@ -17,117 +18,105 @@ namespace Fall2020_CSC403_Project {
     private FrmBattle frmBattle;
 
 
-        static class Globals
-        {
-            public static int m;
-        }
+    static class Globals
+    {
+        public static int m;
+    }
 
-        public FrmLevel() {
+    public FrmLevel() 
+    {
       InitializeComponent();
+    }
 
 
-        }
-
-
-      private void FrmLevel_Load(object sender, EventArgs e) {
+    private void FrmLevel_Load(object sender, EventArgs e)
+    {
       const int PADDING = 7;
       const int NUM_WALLS = 13;
       Random rnd = new Random();
       Globals.m = rnd.Next(1, 5);
 
+      //the player is always mr peanut, and the final boss is the koolaid man, but the other two enemies are randomized
+      player = new Player(CreatePosition(picPlayer), CreateCollider(picPlayer, PADDING), "Mr. Peanut", "Nutty Whack");
+      bossKoolaid = new Enemy(CreatePosition(picBossKoolAid), CreateCollider(picBossKoolAid, PADDING), "THE KOOLAID MAN", "OH YEAAAAHHHHHHH");
+      bossKoolaid.Img = picBossKoolAid.BackgroundImage;
+      bossKoolaid.Color = Color.Green;
 
-            if (Globals.m == 1)
-            {
-                player = new Player(CreatePosition(picPlayer), CreateCollider(picPlayer, PADDING));
-                bossKoolaid = new Enemy(CreatePosition(picBossKoolAid), CreateCollider(picBossKoolAid, PADDING));
-                enemy1 = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING));
-                enemy2 = new Enemy(CreatePosition(picEnemyCheeto), CreateCollider(picEnemyCheeto, PADDING));
+      //given the randomly selected value, setup data for the two corresponding enemy units and dispose all other unneeded enemy units
+      if (Globals.m == 1)
+      {
+        enemy1 = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING), "Corosive Man", "Poison Slice");
+        enemy2 = new Enemy(CreatePosition(picEnemyCheeto), CreateCollider(picEnemyCheeto, PADDING), "Chester Cheeto", "CHEEEEEESE");
+                
+        enemy1.Img = picEnemyPoisonPacket.BackgroundImage;
+        enemy2.Img = picEnemyCheeto.BackgroundImage;
+                
+        enemy1.Color = Color.Red;
+        enemy2.Color = Color.FromArgb(255, 245, 161);
 
-                bossKoolaid.Img = picBossKoolAid.BackgroundImage;
-                enemy1.Img = picEnemyPoisonPacket.BackgroundImage;
-                enemy2.Img = picEnemyCheeto.BackgroundImage;
-
-                bossKoolaid.Color = Color.Green;
-                enemy1.Color = Color.Red;
-                enemy2.Color = Color.FromArgb(255, 245, 161);
-
-                pictureBox1.Dispose();
-                pictureBox2.Dispose();
-                pictureBox3.Dispose();
-                pictureBox4.Dispose();
-                pictureBox5.Dispose();
-            }
+        pictureBox1.Dispose();
+        pictureBox2.Dispose();
+        pictureBox3.Dispose();
+        pictureBox4.Dispose();
+        pictureBox5.Dispose();
+      }
       if (Globals.m == 2)
-            {
-                player = new Player(CreatePosition(picPlayer), CreateCollider(picPlayer, PADDING));
-                bossKoolaid = new Enemy(CreatePosition(picBossKoolAid), CreateCollider(picBossKoolAid, PADDING));
-                enemy1 = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING));
-                enemy2 = new Enemy(CreatePosition(pictureBox1), CreateCollider(pictureBox1, PADDING));
+      {
+        enemy1 = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING), "Corosive Man", "Poison Slice");
+        enemy2 = new Enemy(CreatePosition(pictureBox1), CreateCollider(pictureBox1, PADDING), "Grape Koolaid", "Fruity Blitz");
 
-                bossKoolaid.Img = picBossKoolAid.BackgroundImage;
-                enemy1.Img = picEnemyPoisonPacket.BackgroundImage;
-                enemy2.Img = pictureBox1.BackgroundImage;
+        enemy1.Img = picEnemyPoisonPacket.BackgroundImage;
+        enemy2.Img = pictureBox1.BackgroundImage;
 
-                bossKoolaid.Color = Color.Green;
-                enemy1.Color = Color.Red;
-                enemy2.Color = Color.FromArgb(255, 245, 161);
+        enemy1.Color = Color.Red;
+        enemy2.Color = Color.FromArgb(255, 245, 161);
 
-                picEnemyCheeto.Dispose();
-                pictureBox2.Dispose();
-                pictureBox3.Dispose();
-                pictureBox4.Dispose();
-                pictureBox5.Dispose();
-            }
+        picEnemyCheeto.Dispose();
+        pictureBox2.Dispose();
+        pictureBox3.Dispose();
+        pictureBox4.Dispose();
+        pictureBox5.Dispose();
+      }
 
-            if (Globals.m == 3)
-            {
-                player = new Player(CreatePosition(picPlayer), CreateCollider(picPlayer, PADDING));
-                bossKoolaid = new Enemy(CreatePosition(picBossKoolAid), CreateCollider(picBossKoolAid, PADDING));
-                enemy1 = new Enemy(CreatePosition(pictureBox2), CreateCollider(pictureBox2, PADDING));
-                enemy2 = new Enemy(CreatePosition(pictureBox3), CreateCollider(pictureBox3, PADDING));
+      if (Globals.m == 3)
+      {
+        enemy1 = new Enemy(CreatePosition(pictureBox2), CreateCollider(pictureBox2, PADDING), "Grape Man", "Graple");
+        enemy2 = new Enemy(CreatePosition(pictureBox3), CreateCollider(pictureBox3, PADDING), "Poisonous Pouch", "Toxic Strike");
 
-                bossKoolaid.Img = picBossKoolAid.BackgroundImage;
-                enemy1.Img = pictureBox2.BackgroundImage;
-                enemy2.Img = pictureBox3.BackgroundImage;
+        enemy1.Img = pictureBox2.BackgroundImage;
+        enemy2.Img = pictureBox3.BackgroundImage;
 
-                bossKoolaid.Color = Color.Green;
-                enemy1.Color = Color.Red;
-                enemy2.Color = Color.FromArgb(255, 245, 161);
+        enemy1.Color = Color.Red;
+        enemy2.Color = Color.FromArgb(255, 245, 161);
 
-                pictureBox1.Dispose();
-                picEnemyPoisonPacket.Dispose();
-                picEnemyCheeto.Dispose();
-                pictureBox4.Dispose();
-                pictureBox5.Dispose();
+        pictureBox1.Dispose();
+        picEnemyPoisonPacket.Dispose();
+        picEnemyCheeto.Dispose();
+        pictureBox4.Dispose();
+        pictureBox5.Dispose();
+      }
 
-            }
+      if (Globals.m == 4)
+      {
+        enemy1 = new Enemy(CreatePosition(pictureBox4), CreateCollider(pictureBox4, PADDING), "Mini Koolaid", "Tiny Jab");
+        enemy2 = new Enemy(CreatePosition(pictureBox5), CreateCollider(pictureBox5, PADDING), "Thrower", "Throw-aid");
 
-            if (Globals.m == 4)
-            {
-                player = new Player(CreatePosition(picPlayer), CreateCollider(picPlayer, PADDING));
-                bossKoolaid = new Enemy(CreatePosition(picBossKoolAid), CreateCollider(picBossKoolAid, PADDING));
-                enemy1 = new Enemy(CreatePosition(pictureBox4), CreateCollider(pictureBox4, PADDING));
-                enemy2 = new Enemy(CreatePosition(pictureBox5), CreateCollider(pictureBox5, PADDING));
+        enemy1.Img = pictureBox4.BackgroundImage;
+        enemy2.Img = pictureBox5.BackgroundImage;
 
-                bossKoolaid.Img = picBossKoolAid.BackgroundImage;
-                enemy1.Img = pictureBox4.BackgroundImage;
-                enemy2.Img = pictureBox5.BackgroundImage;
+        enemy1.Color = Color.Red;
+        enemy2.Color = Color.FromArgb(255, 245, 161);
 
-                bossKoolaid.Color = Color.Green;
-                enemy1.Color = Color.Red;
-                enemy2.Color = Color.FromArgb(255, 245, 161);
+        pictureBox1.Dispose();
+        picEnemyPoisonPacket.Dispose();
+        picEnemyCheeto.Dispose();
+        pictureBox2.Dispose();
+        pictureBox3.Dispose();
+      }
 
-                pictureBox1.Dispose();
-                picEnemyPoisonPacket.Dispose();
-                picEnemyCheeto.Dispose();
-                pictureBox2.Dispose();
-                pictureBox3.Dispose();
-            }
-
-
-
-            walls = new Character[NUM_WALLS];
-      for (int w = 0; w < NUM_WALLS; w++) {
+      walls = new Character[NUM_WALLS];
+      for (int w = 0; w < NUM_WALLS; w++)
+      {
         PictureBox pic = Controls.Find("picWall" + w.ToString(), true)[0] as PictureBox;
         walls[w] = new Character(CreatePosition(pic), CreateCollider(pic, PADDING));
       }
