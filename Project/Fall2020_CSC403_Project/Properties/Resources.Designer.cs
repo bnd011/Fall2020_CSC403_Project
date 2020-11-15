@@ -101,16 +101,6 @@ namespace Fall2020_CSC403_Project.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap enemy_poisonpacket_fw {
-            get {
-                object obj = ResourceManager.GetObject("enemy_poisonpacket.fw", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream final_battle {
@@ -125,36 +115,6 @@ namespace Fall2020_CSC403_Project.Properties {
         internal static System.Drawing.Bitmap fog_of_war {
             get {
                 object obj = ResourceManager.GetObject("fog_of_war", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap grape_packet {
-            get {
-                object obj = ResourceManager.GetObject("grape_packet", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap koolaid {
-            get {
-                object obj = ResourceManager.GetObject("koolaid", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Nice_Image_Of_Mr_Kool_Aid {
-            get {
-                object obj = ResourceManager.GetObject("Nice-Image-Of-Mr-Kool-Aid", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

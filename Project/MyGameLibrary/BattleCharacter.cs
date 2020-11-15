@@ -19,9 +19,8 @@ namespace Fall2020_CSC403_Project.code {
     public event Action<int> AttackEvent;
 
     public BattleCharacter(Vector2 initPos, Collider collider, string charName, string charAttackName) : base(initPos, collider) {
-      Random rnd = new Random();
-      strength = rnd.Next(1, 3);
-      MaxHealth = rnd.Next(10, 20);
+      MaxHealth = 20;
+      strength = 2;
       Health = MaxHealth;
       characterName = charName;
       attackName = charAttackName;
