@@ -8,38 +8,81 @@ namespace Fall2020_CSC403_Project
 {
     public partial class FrmLevel : Form
     {
-        private Player player;
+      private Player player;
 
-        private Enemy enemyPoisonPacket;
-        private Enemy bossKoolaid;
-        private Enemy enemyCheeto;
-        //because enemies are hardcoded into the game, this variable is also hard coded. Once enemies are setup in a different way,
-        //this vairble can be initialized when the game starts and recognizes the number of enemies present in the level
-        private int numEnemiesRemaining = 3;
+      private Enemy enemy1;
+      private Enemy bossKoolaid;
+      private Enemy enemy2;
+      //because enemies are hardcoded into the game, this variable is also hard coded. Once enemies are setup in a different way,
+      //this vairble can be initialized when the game starts and recognizes the number of enemies present in the level
+      private int numEnemiesRemaining = 3;
+
+      static class Globals
+      {
+        public static int m;
+      }
 
 
-        private void UpdateLevelAfterEnemyLostInBattle(Enemy defeatedEnemy)
+
+      private void UpdateLevelAfterEnemyLostInBattle(Enemy defeatedEnemy)
+      {
+        //koolaid man final boss is hard coded into the game
+        if (defeatedEnemy == bossKoolaid)
         {
-            //since the game is hard coded with three enemies, this code will manually check each one to figure out which picturebox is correct.
-            //Will need to be updated once multiple enemy support is working to allow for the Enemy to be correlated to the variable correct image
-            if (defeatedEnemy == enemyPoisonPacket)
-            {
-                picEnemyPoisonPacket.Dispose();
-            }
-            else if (defeatedEnemy == bossKoolaid)
-            {
-                picBossKoolAid.Dispose();
-            }
-            else
-            {
-                picEnemyCheeto.Dispose();
-            }
-
-            if (--numEnemiesRemaining <= 0)
-            {
-                GameWonSequence();
-            }
+          picBossKoolAid.Dispose();
         }
+
+        //delete the image for enmey 1 or 2 corresponding to the correct one from the global randomly chosen enemy
+        if (Globals.m == 1)
+        {
+          if (defeatedEnemy == enemy1)
+          {
+            picEnemyPoisonPacket.Dispose();
+          }
+          else
+          {
+            picEnemyCheeto.Dispose();
+          }
+        }
+        else if(Globals.m == 2)
+        {
+          if (defeatedEnemy == enemy1)
+          {
+            picEnemyPoisonPacket.Dispose();
+          }
+          else
+          {
+            pictureBox1.Dispose();
+          }
+        }
+        else if (Globals.m == 3)
+        {
+          if (defeatedEnemy == enemy1)
+          {
+            pictureBox2.Dispose();
+          }
+          else
+          {
+            pictureBox3.Dispose();
+          }
+        }
+        else if (Globals.m == 4)
+        {
+          if (defeatedEnemy == enemy1)
+          {
+            pictureBox4.Dispose();
+          }
+          else
+          {
+            pictureBox5.Dispose();
+          }
+        }
+
+        if (--numEnemiesRemaining <= 0)
+        {
+          GameWonSequence();
+        }
+    }
 
         private Character[] walls;
 
@@ -56,38 +99,105 @@ namespace Fall2020_CSC403_Project
             SetupLevel();
         }
 
-        private void FrmLevel_Load(object sender, EventArgs e)
-        {
-            const int PADDING = 7;
-            const int NUM_WALLS = 13;
+    private void FrmLevel_Load(object sender, EventArgs e)
+    {
+      const int PADDING = 7;
+      const int NUM_WALLS = 13;
+      Random rnd = new Random();
+      Globals.m = rnd.Next(1, 5);
 
-            player = new Player(CreatePosition(picPlayer), CreateCollider(picPlayer, PADDING), "Mr. Peanut", "Nutty Whack");
-            bossKoolaid = new Enemy(CreatePosition(picBossKoolAid), CreateCollider(picBossKoolAid, PADDING), "THE KOOLAID MAN", "OH YEAH POW");
-            enemyPoisonPacket = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING), "Poison Man", "Corosive Strike");
-            enemyCheeto = new Enemy(CreatePosition(picEnemyCheeto), CreateCollider(picEnemyCheeto, PADDING), "Chester Cheeto", "Gouda Oofa");
+      //the player is always mr peanut, and the final boss is the koolaid man, but the other two enemies are randomized
+      player = new Player(CreatePosition(picPlayer), CreateCollider(picPlayer, PADDING), "Mr. Peanut", "Nutty Whack");
+      bossKoolaid = new Enemy(CreatePosition(picBossKoolAid), CreateCollider(picBossKoolAid, PADDING), "THE KOOLAID MAN", "OH YEAAAAHHHHHHH");
+      bossKoolaid.Img = picBossKoolAid.BackgroundImage;
+      bossKoolaid.Color = Color.Green;
 
-            bossKoolaid.Img = picBossKoolAid.BackgroundImage;
-            enemyPoisonPacket.Img = picEnemyPoisonPacket.BackgroundImage;
-            enemyCheeto.Img = picEnemyCheeto.BackgroundImage;
+      //given the randomly selected value, setup data for the two corresponding enemy units and dispose all other unneeded enemy units
+      if (Globals.m == 1)
+      {
+        enemy1 = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING), "Corosive Man", "Poison Slice");
+        enemy2 = new Enemy(CreatePosition(picEnemyCheeto), CreateCollider(picEnemyCheeto, PADDING), "Chester Cheeto", "CHEEEEEESE");
 
-            bossKoolaid.Color = Color.Red;
-            enemyPoisonPacket.Color = Color.Green;
-            enemyCheeto.Color = Color.FromArgb(255, 245, 161);
+        enemy1.Img = picEnemyPoisonPacket.BackgroundImage;
+        enemy2.Img = picEnemyCheeto.BackgroundImage;
 
-            walls = new Character[NUM_WALLS];
-            for (int w = 0; w < NUM_WALLS; w++)
-            {
-                PictureBox pic = Controls.Find("picWall" + w.ToString(), true)[0] as PictureBox;
-                walls[w] = new Character(CreatePosition(pic), CreateCollider(pic, PADDING));
-            }
+        enemy1.Color = Color.Red;
+        enemy2.Color = Color.FromArgb(255, 245, 161);
 
-            Game.player = player;
-            timeBegin = DateTime.Now;
+        pictureBox1.Dispose();
+        pictureBox2.Dispose();
+        pictureBox3.Dispose();
+        pictureBox4.Dispose();
+        pictureBox5.Dispose();
+      }
+      if (Globals.m == 2)
+      {
+        enemy1 = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING), "Corosive Man", "Poison Slice");
+        enemy2 = new Enemy(CreatePosition(pictureBox1), CreateCollider(pictureBox1, PADDING), "Grape Koolaid", "Fruity Blitz");
 
-            Enemy.EnemyLostInBattle += UpdateLevelAfterEnemyLostInBattle;
-        }
+        enemy1.Img = picEnemyPoisonPacket.BackgroundImage;
+        enemy2.Img = pictureBox1.BackgroundImage;
 
-        private Vector2 CreatePosition(PictureBox pic)
+        enemy1.Color = Color.Red;
+        enemy2.Color = Color.FromArgb(255, 245, 161);
+
+        picEnemyCheeto.Dispose();
+        pictureBox2.Dispose();
+        pictureBox3.Dispose();
+        pictureBox4.Dispose();
+        pictureBox5.Dispose();
+      }
+
+      if (Globals.m == 3)
+      {
+        enemy1 = new Enemy(CreatePosition(pictureBox2), CreateCollider(pictureBox2, PADDING), "Grape Man", "Graple");
+        enemy2 = new Enemy(CreatePosition(pictureBox3), CreateCollider(pictureBox3, PADDING), "Poisonous Pouch", "Toxic Strike");
+
+        enemy1.Img = pictureBox2.BackgroundImage;
+        enemy2.Img = pictureBox3.BackgroundImage;
+
+        enemy1.Color = Color.Red;
+        enemy2.Color = Color.FromArgb(255, 245, 161);
+
+        pictureBox1.Dispose();
+        picEnemyPoisonPacket.Dispose();
+        picEnemyCheeto.Dispose();
+        pictureBox4.Dispose();
+        pictureBox5.Dispose();
+      }
+
+      if (Globals.m == 4)
+      {
+        enemy1 = new Enemy(CreatePosition(pictureBox4), CreateCollider(pictureBox4, PADDING), "Mini Koolaid", "Tiny Jab");
+        enemy2 = new Enemy(CreatePosition(pictureBox5), CreateCollider(pictureBox5, PADDING), "Thrower", "Throw-aid");
+
+        enemy1.Img = pictureBox4.BackgroundImage;
+        enemy2.Img = pictureBox5.BackgroundImage;
+
+        enemy1.Color = Color.Red;
+        enemy2.Color = Color.FromArgb(255, 245, 161);
+
+        pictureBox1.Dispose();
+        picEnemyPoisonPacket.Dispose();
+        picEnemyCheeto.Dispose();
+        pictureBox2.Dispose();
+        pictureBox3.Dispose();
+      }
+
+      walls = new Character[NUM_WALLS];
+      for (int w = 0; w < NUM_WALLS; w++)
+      {
+        PictureBox pic = Controls.Find("picWall" + w.ToString(), true)[0] as PictureBox;
+        walls[w] = new Character(CreatePosition(pic), CreateCollider(pic, PADDING));
+      }
+
+      Game.player = player;
+      timeBegin = DateTime.Now;
+      Player.PlayerLost += GameLostSequence;
+      Enemy.EnemyLostInBattle += UpdateLevelAfterEnemyLostInBattle;
+    }
+
+    private Vector2 CreatePosition(PictureBox pic)
         {
             return new Vector2(pic.Location.X, pic.Location.Y);
         }
@@ -128,13 +238,13 @@ namespace Fall2020_CSC403_Project
             }
 
             // check collision with enemies
-            if (HitAChar(player, enemyPoisonPacket))
+            if (HitAChar(player, enemy1))
             {
-                Fight(enemyPoisonPacket);
+                Fight(enemy1);
             }
-            else if (HitAChar(player, enemyCheeto))
+            else if (HitAChar(player, enemy2))
             {
-                Fight(enemyCheeto);
+                Fight(enemy2);
             }
             if (HitAChar(player, bossKoolaid))
             {
@@ -225,5 +335,11 @@ namespace Fall2020_CSC403_Project
             MessageBox.Show("Congratulations! You Win!");
             Application.Exit();
         }
+        private void GameLostSequence()
+        {
+          MessageBox.Show("Big Oof! You Lost!");
+          Application.Exit();
+        }
+    
     }
 }

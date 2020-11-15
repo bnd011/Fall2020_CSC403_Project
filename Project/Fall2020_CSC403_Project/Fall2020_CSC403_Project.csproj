@@ -124,6 +124,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="data\fog_of_war.png" />
+    <None Include="data\Nice-Image-Of-Mr-Kool-Aid.png" />
+    <None Include="data\koolaid.png" />
+    <None Include="data\grape_packet.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
