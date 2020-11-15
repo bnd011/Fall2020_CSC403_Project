@@ -44,12 +44,5 @@ namespace Fall2020_CSC403_Project.code {
     public void ResetMoveSpeed() {
       MoveSpeed = new Vector2(0, 0);
     }
-
-    //disable the character collider and place them off screen to simulate removing them.
-    public void RemoveCharacterFromView()
-    {
-      Position = new Vector2(-1000, -1000);
-      Collider = null;
-    }
   }
 }
