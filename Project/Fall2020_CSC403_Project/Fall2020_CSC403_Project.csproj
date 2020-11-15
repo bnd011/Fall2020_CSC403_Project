@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+﻿﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Fall2020_CSC403_Project</RootNamespace>
     <AssemblyName>Fall2020_CSC403_Project</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -52,22 +53,19 @@
     <Compile Include="FrmBattle.Designer.cs">
       <DependentUpon>FrmBattle.cs</DependentUpon>
     </Compile>
-    <Compile Include="..\..\..\..\..\Documents\College\Fall2020\FrmLevel.cs">
+    <Compile Include="FrmLevel.cs">
       <SubType>Form</SubType>
-      <Link>FrmLevel.cs</Link>
     </Compile>
-    <Compile Include="..\..\..\..\..\Documents\College\Fall2020\FrmLevel.Designer.cs">
+    <Compile Include="FrmLevel.Designer.cs">
       <DependentUpon>FrmLevel.cs</DependentUpon>
-      <Link>FrmLevel.Designer.cs</Link>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmBattle.resx">
       <DependentUpon>FrmBattle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="..\..\..\..\..\Documents\College\Fall2020\FrmLevel.resx">
+    <EmbeddedResource Include="FrmLevel.resx">
       <DependentUpon>FrmLevel.cs</DependentUpon>
-      <Link>FrmLevel.resx</Link>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -125,13 +123,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="data\fog_of_war.png" />
+    <None Include="data\Nice-Image-Of-Mr-Kool-Aid.png" />
+    <None Include="data\koolaid.png" />
     <None Include="data\grape_packet.jpeg" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="data\koolaid.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="data\Nice-Image-Of-Mr-Kool-Aid.png" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+
 </Project>
