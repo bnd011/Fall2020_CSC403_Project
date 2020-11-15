@@ -112,9 +112,29 @@ namespace Fall2020_CSC403_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap fog_of_war {
+        internal static System.Drawing.Bitmap grape_packet {
             get {
-                object obj = ResourceManager.GetObject("fog_of_war", resourceCulture);
+                object obj = ResourceManager.GetObject("grape_packet", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap koolaid {
+            get {
+                object obj = ResourceManager.GetObject("koolaid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Nice_Image_Of_Mr_Kool_Aid {
+            get {
+                object obj = ResourceManager.GetObject("Nice-Image-Of-Mr-Kool-Aid", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
