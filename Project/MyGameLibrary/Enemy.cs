@@ -15,9 +15,10 @@ namespace Fall2020_CSC403_Project.code {
     /// this is the background color for the fight form for this enemy
     /// </summary>
     public Color Color { get; set; }
+        public Point Location { get; set; }
 
-    //observer pattern event to notify systems when an enemy was removed
-    public delegate void TriggerEnemyLostInBattle(Enemy defeatedEnemy);
+        //observer pattern event to notify systems when an enemy was removed
+        public delegate void TriggerEnemyLostInBattle(Enemy defeatedEnemy);
     public static event TriggerEnemyLostInBattle EnemyLostInBattle;
 
     /// <summary>

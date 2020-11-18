@@ -360,6 +360,34 @@ namespace Fall2020_CSC403_Project
             fog_right.Location = new Point((int)player.Position.x + fog_right_offset[0], (int)player.Position.y + fog_right_offset[1]);
         }
 
+        private void tmrEnemyMove_Tick(object sender, EventArgs e)
+        {
+            // move enemies
+            enemy1.Move();
+            enemy2.Move();
+            bossKoolaid.Move();
+
+            // check collision with walls
+            if (HitAWall(enemy1))
+            {
+                enemy1.MoveBack();
+            }
+            if (HitAWall(enemy2))
+            {
+                enemy2.MoveBack();
+            }
+            if (HitAWall(bossKoolaid))
+            {
+                bossKoolaid.MoveBack();
+            }
+
+            // update player's picture box
+            picEnemy1.Location = new Point((int)(new Random().Next(0, 1025)), (int)(new Random().Next(0, 545)));
+            //enemy1.Location = new Point((int)enemy1.Position.x, (int)enemy1.Position.y);
+            picEnemy2.Location = new Point((int)enemy2.Position.x, (int)enemy2.Position.y);
+            picBossKoolAid.Location = new Point((int)bossKoolaid.Position.x, (int)bossKoolaid.Position.y);
+        }
+
         private bool HitAWall(Character c)
         {
             bool hitAWall = false;

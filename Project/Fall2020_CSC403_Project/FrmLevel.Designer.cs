@@ -37,6 +37,9 @@ namespace Fall2020_CSC403_Project
             this.lblInGameTime = new System.Windows.Forms.Label();
             this.tmrUpdateInGameTime = new System.Windows.Forms.Timer(this.components);
             this.tmrPlayerMove = new System.Windows.Forms.Timer(this.components);
+            this.tmrEnemyMove = new System.Windows.Forms.Timer(this.components);
+            this.picEnemy1 = new System.Windows.Forms.PictureBox();
+            this.picEnemy2 = new System.Windows.Forms.PictureBox();
             this.picEnemyCheeto = new System.Windows.Forms.PictureBox();
             this.picEnemyPoisonPacket = new System.Windows.Forms.PictureBox();
             this.picBossKoolAid = new System.Windows.Forms.PictureBox();
@@ -127,6 +130,12 @@ namespace Fall2020_CSC403_Project
             this.tmrPlayerMove.Enabled = true;
             this.tmrPlayerMove.Interval = 10;
             this.tmrPlayerMove.Tick += new System.EventHandler(this.tmrPlayerMove_Tick);
+            // 
+            // tmrEnemyMove
+            // 
+            this.tmrEnemyMove.Enabled = true;
+            this.tmrEnemyMove.Interval = 10;
+            this.tmrEnemyMove.Tick += new System.EventHandler(this.tmrEnemyMove_Tick);
             // 
             // picEnemyCheeto
             // 
@@ -558,9 +567,12 @@ namespace Fall2020_CSC403_Project
 
         private System.Windows.Forms.PictureBox picPlayer;
         private System.Windows.Forms.PictureBox picBossKoolAid;
+        private System.Windows.Forms.PictureBox picEnemy1;
+        private System.Windows.Forms.PictureBox picEnemy2;
         private System.Windows.Forms.Label lblInGameTime;
         private System.Windows.Forms.Timer tmrUpdateInGameTime;
         private System.Windows.Forms.Timer tmrPlayerMove;
+        private System.Windows.Forms.Timer tmrEnemyMove;
         private System.Windows.Forms.PictureBox picEnemyPoisonPacket;
         private System.Windows.Forms.PictureBox picEnemyCheeto;
         private System.Windows.Forms.PictureBox fog_upper;
