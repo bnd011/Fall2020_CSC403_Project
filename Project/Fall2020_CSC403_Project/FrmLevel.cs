@@ -340,6 +340,10 @@ namespace Fall2020_CSC403_Project
           MessageBox.Show("Big Oof! You Lost!");
           Application.Exit();
         }
-    
+
+        private void FrmLevel_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
