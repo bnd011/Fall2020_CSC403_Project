@@ -12,8 +12,9 @@ namespace Fall2020_CSC403_Project {
     public static FrmBattle instance = null;
     private Enemy enemy;
     private Player player;
+    public string vcontrol = Sound_Page.igvolcontrol; // Will be used to turn sound on/off
 
-    private FrmBattle() {
+        private FrmBattle() {
       InitializeComponent();
       player = Game.player;
     }
@@ -39,9 +40,14 @@ namespace Fall2020_CSC403_Project {
       picBossBattle.Visible = true;
 
       SoundPlayer simpleSound = new SoundPlayer(Resources.final_battle);
-      simpleSound.Play();
+      // if igvolume variable changed to OFF from the sound page, then sound will not play.
+      if (vcontrol.Equals("ON"))
+        {
+             simpleSound.Play();
+        }
 
-      tmrFinalBattle.Enabled = true;
+
+            tmrFinalBattle.Enabled = true;
     }
 
     public static FrmBattle GetInstance(Enemy enemy) {

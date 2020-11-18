@@ -61,6 +61,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sound_Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sound_Page.designer.cs">
+      <DependentUpon>Sound_Page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Start_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start_Menu.designer.cs">
+      <DependentUpon>Start_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tutorial_Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tutorial_Page.designer.cs">
+      <DependentUpon>Tutorial_Page.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FrmBattle.resx">
       <DependentUpon>FrmBattle.cs</DependentUpon>
     </EmbeddedResource>
@@ -71,6 +89,15 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sound_Page.resx">
+      <DependentUpon>Sound_Page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Start_Menu.resx">
+      <DependentUpon>Start_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tutorial_Page.resx">
+      <DependentUpon>Tutorial_Page.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
@@ -114,7 +141,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="code\" />
-    <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MyGameLibrary\MyGameLibrary.csproj">
@@ -124,6 +150,36 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="data\fog_of_war.png" />
+    <None Include="Resources\sreload.wav" />
+    <None Include="Resources\shotgun.wav" />
+    <None Include="Resources\helileaving.wav" />
+    <None Include="Resources\helicopter.wav" />
+    <None Include="Resources\grenade.wav" />
+    <None Include="Resources\drawsword.wav" />
+    <None Include="Resources\tutorialpage.png" />
+    <None Include="Resources\tutorialhover.png" />
+    <None Include="Resources\tutorial.png" />
+    <None Include="Resources\sword.gif" />
+    <None Include="Resources\startgamehover.png" />
+    <None Include="Resources\startgame.png" />
+    <None Include="Resources\soundpage.png" />
+    <None Include="Resources\soundhover.png" />
+    <None Include="Resources\sound.png" />
+    <None Include="Resources\skull_cross.jpg" />
+    <None Include="Resources\rotating_skull.gif" />
+    <None Include="Resources\ONhovering.png" />
+    <None Include="Resources\ON.png" />
+    <None Include="Resources\OFFhovering.png" />
+    <None Include="Resources\OFF.png" />
+    <None Include="Resources\IN_GAME_VOL.png" />
+    <None Include="Resources\gun.gif" />
+    <None Include="Resources\fogofwar.png" />
+    <None Include="Resources\fire_crossbones.gif" />
+    <None Include="Resources\fire.gif" />
+    <None Include="Resources\exitgamehover.png" />
+    <None Include="Resources\exitgame.png" />
+    <None Include="Resources\backbuttonhovering.png" />
+    <None Include="Resources\backbutton.png" />
     <None Include="data\Nice-Image-Of-Mr-Kool-Aid.png" />
     <None Include="data\koolaid.png" />
     <None Include="data\grape_packet.jpeg" />

@@ -154,4 +154,94 @@
   <data name="Nice-Image-Of-Mr-Kool-Aid" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\data\Nice-Image-Of-Mr-Kool-Aid.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="backbutton" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backbutton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="backbuttonhovering" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backbuttonhovering.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="drawsword" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\drawsword.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="exitgame" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exitgame.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="exitgamehover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\exitgamehover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fire" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fire.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fire_crossbones" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fire_crossbones.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fogofwar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fogofwar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="grenade" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\grenade.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="gun" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gun.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="helicopter" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\helicopter.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="helileaving" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\helileaving.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="IN_GAME_VOL" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IN_GAME_VOL.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OFF" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OFF.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="OFFhovering" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\OFFhovering.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ON" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ON.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ONhovering" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ONhovering.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rotating_skull" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rotating_skull.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shotgun" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shotgun.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="skull_cross" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skull_cross.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sound" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sound.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="soundhover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\soundhover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="soundpage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\soundpage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sreload" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sreload.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="startgame" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\startgame.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="startgamehover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\startgamehover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sword" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sword.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tutorial" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tutorial.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tutorialhover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tutorialhover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tutorialpage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tutorialpage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
