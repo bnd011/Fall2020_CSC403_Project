@@ -225,7 +225,7 @@ namespace Fall2020_CSC403_Project
             if (Globals.m == 1)
             {
                 enemy1 = new Enemy(CreatePosition(picEnemyPoisonPacket), CreateCollider(picEnemyPoisonPacket, PADDING), "Corosive Man", "Poison Slice", picEnemyPoisonPacket);
-                enemy2 = new Enemy(CreatePosition(picEnemyCheeto), CreateCollider(picEnemyCheeto, PADDING), "Chester Cheeto", "CHEEEEEESE", picEnemyPoisonPacket);
+                enemy2 = new Enemy(CreatePosition(picEnemyCheeto), CreateCollider(picEnemyCheeto, PADDING), "Chester Cheeto", "CHEEEEEESE", picEnemyCheeto);
 
                 enemy1.Img = picEnemyPoisonPacket.BackgroundImage;
                 enemy2.Img = picEnemyCheeto.BackgroundImage;
@@ -444,6 +444,11 @@ namespace Fall2020_CSC403_Project
         private void FrmLevel_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void picEnemyCheeto_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
