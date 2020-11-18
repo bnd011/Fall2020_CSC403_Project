@@ -1,4 +1,6 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
+using System.Windows.Forms;
 
 namespace Fall2020_CSC403_Project
 {
@@ -39,6 +41,11 @@ namespace Fall2020_CSC403_Project
             this.picEnemyPoisonPacket = new System.Windows.Forms.PictureBox();
             this.picBossKoolAid = new System.Windows.Forms.PictureBox();
             this.picPlayer = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.fog_upper = new System.Windows.Forms.PictureBox();
             this.fog_left = new System.Windows.Forms.PictureBox();
             this.fog_lower = new System.Windows.Forms.PictureBox();
@@ -65,6 +72,11 @@ namespace Fall2020_CSC403_Project
             ((System.ComponentModel.ISupportInitialize)(this.picEnemyPoisonPacket)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBossKoolAid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fog_upper)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fog_left)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fog_lower)).BeginInit();
@@ -97,7 +109,8 @@ namespace Fall2020_CSC403_Project
             this.lblInGameTime.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblInGameTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInGameTime.ForeColor = System.Drawing.Color.White;
-            this.lblInGameTime.Location = new System.Drawing.Point(3, 3);
+            this.lblInGameTime.Location = new System.Drawing.Point(2, 2);
+            this.lblInGameTime.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblInGameTime.Name = "lblInGameTime";
             this.lblInGameTime.Size = new System.Drawing.Size(48, 20);
             this.lblInGameTime.TabIndex = 2;
@@ -120,20 +133,22 @@ namespace Fall2020_CSC403_Project
             this.picEnemyCheeto.BackColor = System.Drawing.Color.Transparent;
             this.picEnemyCheeto.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.enemy_cheetos;
             this.picEnemyCheeto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picEnemyCheeto.Location = new System.Drawing.Point(528, 131);
+            this.picEnemyCheeto.Location = new System.Drawing.Point(425, 117);
+            this.picEnemyCheeto.Margin = new System.Windows.Forms.Padding(2);
             this.picEnemyCheeto.Name = "picEnemyCheeto";
-            this.picEnemyCheeto.Size = new System.Drawing.Size(64, 107);
+            this.picEnemyCheeto.Size = new System.Drawing.Size(48, 87);
             this.picEnemyCheeto.TabIndex = 5;
             this.picEnemyCheeto.TabStop = false;
             // 
             // picEnemyPoisonPacket
             // 
             this.picEnemyPoisonPacket.BackColor = System.Drawing.Color.Transparent;
-            this.picEnemyPoisonPacket.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.enemy_poisonpacket;
+            this.picEnemyPoisonPacket.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.enemy_poisonpacket_fw;
             this.picEnemyPoisonPacket.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picEnemyPoisonPacket.Location = new System.Drawing.Point(431, 425);
+            this.picEnemyPoisonPacket.Location = new System.Drawing.Point(239, 349);
+            this.picEnemyPoisonPacket.Margin = new System.Windows.Forms.Padding(2);
             this.picEnemyPoisonPacket.Name = "picEnemyPoisonPacket";
-            this.picEnemyPoisonPacket.Size = new System.Drawing.Size(63, 96);
+            this.picEnemyPoisonPacket.Size = new System.Drawing.Size(47, 78);
             this.picEnemyPoisonPacket.TabIndex = 4;
             this.picEnemyPoisonPacket.TabStop = false;
             // 
@@ -142,9 +157,10 @@ namespace Fall2020_CSC403_Project
             this.picBossKoolAid.BackColor = System.Drawing.Color.Transparent;
             this.picBossKoolAid.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBossKoolAid.BackgroundImage")));
             this.picBossKoolAid.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picBossKoolAid.Location = new System.Drawing.Point(794, 266);
+            this.picBossKoolAid.Location = new System.Drawing.Point(909, 307);
+            this.picBossKoolAid.Margin = new System.Windows.Forms.Padding(2);
             this.picBossKoolAid.Name = "picBossKoolAid";
-            this.picBossKoolAid.Size = new System.Drawing.Size(193, 194);
+            this.picBossKoolAid.Size = new System.Drawing.Size(145, 158);
             this.picBossKoolAid.TabIndex = 1;
             this.picBossKoolAid.TabStop = false;
             // 
@@ -153,7 +169,8 @@ namespace Fall2020_CSC403_Project
             this.picPlayer.BackColor = System.Drawing.Color.Transparent;
             this.picPlayer.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.player;
             this.picPlayer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picPlayer.Location = new System.Drawing.Point(146, 337);
+            this.picPlayer.Location = new System.Drawing.Point(139, 285);
+            this.picPlayer.Margin = new System.Windows.Forms.Padding(2);
             this.picPlayer.Name = "picPlayer";
             this.picPlayer.Size = new System.Drawing.Size(30, 65);
             this.picPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -161,84 +178,147 @@ namespace Fall2020_CSC403_Project
             this.picPlayer.TabStop = false;
             this.picPlayer.Click += new System.EventHandler(this.picPlayer_Click);
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.Nice_Image_Of_Mr_Kool_Aid;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Location = new System.Drawing.Point(1130, 665);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(72, 130);
+            this.pictureBox5.TabIndex = 26;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.koolaid;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(511, 452);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(54, 106);
+            this.pictureBox4.TabIndex = 25;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.enemy_poisonpacket_fw;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(1130, 665);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(72, 130);
+            this.pictureBox3.TabIndex = 24;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.grape_packet;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(531, 203);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(54, 106);
+            this.pictureBox2.TabIndex = 23;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.grape_packet;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(1130, 665);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(72, 130);
+            this.pictureBox1.TabIndex = 22;
+            this.pictureBox1.TabStop = false;
+            // 
             // fog_upper
             // 
             this.fog_upper.BackColor = System.Drawing.Color.Black;
-            this.fog_upper.Location = new System.Drawing.Point(-34, -556);
+            this.fog_upper.Location = new System.Drawing.Point(-569, -567);
             this.fog_upper.Name = "fog_upper";
-            this.fog_upper.Size = new System.Drawing.Size(2346, 575);
+            this.fog_upper.Size = new System.Drawing.Size(2346, 588);
             this.fog_upper.TabIndex = 18;
             this.fog_upper.TabStop = false;
             // 
             // fog_left
             // 
             this.fog_left.BackColor = System.Drawing.Color.Black;
-            this.fog_left.Location = new System.Drawing.Point(15, 710);
+            this.fog_left.Location = new System.Drawing.Point(70, 711);
             this.fog_left.Name = "fog_left";
-            this.fog_left.Size = new System.Drawing.Size(1032, 294);
+            this.fog_left.Size = new System.Drawing.Size(1034, 294);
             this.fog_left.TabIndex = 20;
             this.fog_left.TabStop = false;
             // 
             // fog_lower
             // 
             this.fog_lower.BackColor = System.Drawing.Color.Black;
-            this.fog_lower.Location = new System.Drawing.Point(-467, 713);
+            this.fog_lower.Location = new System.Drawing.Point(-433, 711);
             this.fog_lower.Name = "fog_lower";
-            this.fog_lower.Size = new System.Drawing.Size(2346, 565);
+            this.fog_lower.Size = new System.Drawing.Size(2346, 533);
             this.fog_lower.TabIndex = 19;
             this.fog_lower.TabStop = false;
             // 
             // fog_right
             // 
             this.fog_right.BackColor = System.Drawing.Color.Black;
-            this.fog_right.Location = new System.Drawing.Point(17, -276);
+            this.fog_right.Location = new System.Drawing.Point(1160, 229);
             this.fog_right.Name = "fog_right";
-            this.fog_right.Size = new System.Drawing.Size(1066, 294);
+            this.fog_right.Size = new System.Drawing.Size(1014, 294);
             this.fog_right.TabIndex = 21;
             this.fog_right.TabStop = false;
             // 
             // level1
             // 
             this.level1.BackColor = System.Drawing.Color.Transparent;
-            this.level1.Location = new System.Drawing.Point(-7, -6);
+            this.level1.Location = new System.Drawing.Point(95, -65);
+            this.level1.Margin = new System.Windows.Forms.Padding(2);
             this.level1.Name = "level1";
-            this.level1.Size = new System.Drawing.Size(1188, 107);
+            this.level1.Size = new System.Drawing.Size(891, 87);
             this.level1.TabIndex = 22;
             this.level1.TabStop = false;
             // 
             // level2
             // 
             this.level2.BackColor = System.Drawing.Color.Transparent;
-            this.level2.Location = new System.Drawing.Point(-7, 626);
+            this.level2.Location = new System.Drawing.Point(95, 682);
+            this.level2.Margin = new System.Windows.Forms.Padding(2);
             this.level2.Name = "level2";
-            this.level2.Size = new System.Drawing.Size(1188, 109);
+            this.level2.Size = new System.Drawing.Size(891, 89);
             this.level2.TabIndex = 23;
             this.level2.TabStop = false;
             // 
             // level3
             // 
             this.level3.BackColor = System.Drawing.Color.Transparent;
-            this.level3.Location = new System.Drawing.Point(-6, 12);
+            this.level3.Location = new System.Drawing.Point(-4, 10);
+            this.level3.Margin = new System.Windows.Forms.Padding(2);
             this.level3.Name = "level3";
-            this.level3.Size = new System.Drawing.Size(107, 702);
+            this.level3.Size = new System.Drawing.Size(80, 570);
             this.level3.TabIndex = 24;
             this.level3.TabStop = false;
             // 
             // level4
             // 
             this.level4.BackColor = System.Drawing.Color.Transparent;
-            this.level4.Location = new System.Drawing.Point(1077, 32);
+            this.level4.Location = new System.Drawing.Point(1085, 80);
+            this.level4.Margin = new System.Windows.Forms.Padding(2);
             this.level4.Name = "level4";
-            this.level4.Size = new System.Drawing.Size(107, 682);
+            this.level4.Size = new System.Drawing.Size(80, 554);
             this.level4.TabIndex = 25;
             this.level4.TabStop = false;
             // 
             // level5
             // 
             this.level5.BackColor = System.Drawing.Color.Transparent;
-            this.level5.Location = new System.Drawing.Point(326, 392);
+            this.level5.Location = new System.Drawing.Point(337, 441);
+            this.level5.Margin = new System.Windows.Forms.Padding(2);
             this.level5.Name = "level5";
-            this.level5.Size = new System.Drawing.Size(76, 238);
+            this.level5.Size = new System.Drawing.Size(57, 193);
             this.level5.TabIndex = 26;
             this.level5.TabStop = false;
             this.level5.Click += new System.EventHandler(this.level5_Click);
@@ -246,27 +326,30 @@ namespace Fall2020_CSC403_Project
             // level6
             // 
             this.level6.BackColor = System.Drawing.Color.Transparent;
-            this.level6.Location = new System.Drawing.Point(326, 326);
+            this.level6.Location = new System.Drawing.Point(353, 338);
+            this.level6.Margin = new System.Windows.Forms.Padding(2);
             this.level6.Name = "level6";
-            this.level6.Size = new System.Drawing.Size(225, 76);
+            this.level6.Size = new System.Drawing.Size(169, 62);
             this.level6.TabIndex = 27;
             this.level6.TabStop = false;
             // 
             // level7
             // 
             this.level7.BackColor = System.Drawing.Color.Transparent;
-            this.level7.Location = new System.Drawing.Point(626, 99);
+            this.level7.Location = new System.Drawing.Point(641, 137);
+            this.level7.Margin = new System.Windows.Forms.Padding(2);
             this.level7.Name = "level7";
-            this.level7.Size = new System.Drawing.Size(75, 453);
+            this.level7.Size = new System.Drawing.Size(56, 368);
             this.level7.TabIndex = 28;
             this.level7.TabStop = false;
             // 
             // level8
             // 
             this.level8.BackColor = System.Drawing.Color.Transparent;
-            this.level8.Location = new System.Drawing.Point(327, 169);
+            this.level8.Location = new System.Drawing.Point(641, 272);
+            this.level8.Margin = new System.Windows.Forms.Padding(2);
             this.level8.Name = "level8";
-            this.level8.Size = new System.Drawing.Size(75, 83);
+            this.level8.Size = new System.Drawing.Size(56, 67);
             this.level8.TabIndex = 29;
             this.level8.TabStop = false;
             this.level8.Click += new System.EventHandler(this.level8_Click);
@@ -274,103 +357,111 @@ namespace Fall2020_CSC403_Project
             // level9
             // 
             this.level9.BackColor = System.Drawing.Color.Transparent;
-            this.level9.Location = new System.Drawing.Point(89, 477);
+            this.level9.Location = new System.Drawing.Point(25, 584);
+            this.level9.Margin = new System.Windows.Forms.Padding(2);
             this.level9.Name = "level9";
-            this.level9.Size = new System.Drawing.Size(87, 88);
+            this.level9.Size = new System.Drawing.Size(65, 72);
             this.level9.TabIndex = 30;
             this.level9.TabStop = false;
             // 
             // level10
             // 
             this.level10.BackColor = System.Drawing.Color.Transparent;
-            this.level10.Location = new System.Drawing.Point(213, 451);
+            this.level10.Location = new System.Drawing.Point(110, 479);
+            this.level10.Margin = new System.Windows.Forms.Padding(2);
             this.level10.Name = "level10";
-            this.level10.Size = new System.Drawing.Size(76, 70);
+            this.level10.Size = new System.Drawing.Size(57, 57);
             this.level10.TabIndex = 31;
             this.level10.TabStop = false;
             // 
             // level11
             // 
             this.level11.BackColor = System.Drawing.Color.Transparent;
-            this.level11.Location = new System.Drawing.Point(627, 99);
+            this.level11.Location = new System.Drawing.Point(641, 39);
+            this.level11.Margin = new System.Windows.Forms.Padding(2);
             this.level11.Name = "level11";
-            this.level11.Size = new System.Drawing.Size(375, 76);
+            this.level11.Size = new System.Drawing.Size(281, 62);
             this.level11.TabIndex = 32;
             this.level11.TabStop = false;
             // 
             // level12
             // 
             this.level12.BackColor = System.Drawing.Color.Transparent;
-            this.level12.Location = new System.Drawing.Point(1001, 156);
+            this.level12.Location = new System.Drawing.Point(902, 82);
+            this.level12.Margin = new System.Windows.Forms.Padding(2);
             this.level12.Name = "level12";
-            this.level12.Size = new System.Drawing.Size(87, 96);
+            this.level12.Size = new System.Drawing.Size(65, 78);
             this.level12.TabIndex = 33;
             this.level12.TabStop = false;
             // 
             // level13
             // 
             this.level13.BackColor = System.Drawing.Color.Transparent;
-            this.level13.Location = new System.Drawing.Point(1002, 475);
+            this.level13.Location = new System.Drawing.Point(1026, 512);
+            this.level13.Margin = new System.Windows.Forms.Padding(2);
             this.level13.Name = "level13";
-            this.level13.Size = new System.Drawing.Size(87, 115);
+            this.level13.Size = new System.Drawing.Size(65, 93);
             this.level13.TabIndex = 34;
             this.level13.TabStop = false;
             // 
             // level14
             // 
             this.level14.BackColor = System.Drawing.Color.Transparent;
-            this.level14.Location = new System.Drawing.Point(176, 553);
+            this.level14.Location = new System.Drawing.Point(131, 552);
+            this.level14.Margin = new System.Windows.Forms.Padding(2);
             this.level14.Name = "level14";
-            this.level14.Size = new System.Drawing.Size(150, 77);
+            this.level14.Size = new System.Drawing.Size(112, 63);
             this.level14.TabIndex = 35;
             this.level14.TabStop = false;
             // 
             // level15
             // 
             this.level15.BackColor = System.Drawing.Color.Transparent;
-            this.level15.Location = new System.Drawing.Point(175, 101);
+            this.level15.Location = new System.Drawing.Point(181, 72);
+            this.level15.Margin = new System.Windows.Forms.Padding(2);
             this.level15.Name = "level15";
-            this.level15.Size = new System.Drawing.Size(227, 75);
+            this.level15.Size = new System.Drawing.Size(170, 61);
             this.level15.TabIndex = 36;
             this.level15.TabStop = false;
             // 
             // level18
             // 
             this.level18.BackColor = System.Drawing.Color.Transparent;
-            this.level18.Location = new System.Drawing.Point(702, 161);
+            this.level18.Location = new System.Drawing.Point(681, 131);
+            this.level18.Margin = new System.Windows.Forms.Padding(2);
             this.level18.Name = "level18";
-            this.level18.Size = new System.Drawing.Size(75, 90);
+            this.level18.Size = new System.Drawing.Size(56, 73);
             this.level18.TabIndex = 37;
             this.level18.TabStop = false;
             // 
             // level17
             // 
             this.level17.BackColor = System.Drawing.Color.Transparent;
-            this.level17.Location = new System.Drawing.Point(852, 552);
+            this.level17.Location = new System.Drawing.Point(867, 584);
+            this.level17.Margin = new System.Windows.Forms.Padding(2);
             this.level17.Name = "level17";
-            this.level17.Size = new System.Drawing.Size(245, 77);
+            this.level17.Size = new System.Drawing.Size(184, 63);
             this.level17.TabIndex = 38;
             this.level17.TabStop = false;
             // 
             // level16
             // 
             this.level16.BackColor = System.Drawing.Color.Transparent;
-            this.level16.Location = new System.Drawing.Point(93, 161);
+            this.level16.Location = new System.Drawing.Point(65, 106);
+            this.level16.Margin = new System.Windows.Forms.Padding(2);
             this.level16.Name = "level16";
-            this.level16.Size = new System.Drawing.Size(83, 90);
+            this.level16.Size = new System.Drawing.Size(62, 73);
             this.level16.TabIndex = 39;
             this.level16.TabStop = false;
             // 
             // FrmLevel
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.BackgroundImage = global::Fall2020_CSC403_Project.Properties.Resources.layout4;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1568, 894);
-            this.Controls.Add(this.fog_upper);
-            this.Controls.Add(this.fog_lower);
+            this.ClientSize = new System.Drawing.Size(1176, 726);
             this.Controls.Add(this.fog_right);
             this.Controls.Add(this.lblInGameTime);
             this.Controls.Add(this.fog_left);
@@ -395,14 +486,15 @@ namespace Fall2020_CSC403_Project
             this.Controls.Add(this.level2);
             this.Controls.Add(this.level1);
             this.Controls.Add(this.picEnemyCheeto);
-            this.Controls.Add(this.picBossKoolAid);
+            this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.picEnemyPoisonPacket);
             this.Controls.Add(this.picBossKoolAid);
             this.Controls.Add(this.picPlayer);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmLevel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Explore";
@@ -415,7 +507,11 @@ namespace Fall2020_CSC403_Project
             ((System.ComponentModel.ISupportInitialize)(this.picEnemyPoisonPacket)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBossKoolAid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPlayer)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fog_lower)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fog_upper)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fog_left)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fog_lower)).EndInit();
@@ -441,6 +537,21 @@ namespace Fall2020_CSC403_Project
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void level8_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void level5_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void picPlayer_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
@@ -474,6 +585,11 @@ namespace Fall2020_CSC403_Project
         private System.Windows.Forms.PictureBox level18;
         private System.Windows.Forms.PictureBox level17;
         private System.Windows.Forms.PictureBox level16;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }
 

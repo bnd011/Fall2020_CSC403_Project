@@ -17,18 +17,20 @@ namespace Fall2020_CSC403_Project.code {
     public string AttackName{get => attackName; }
 
     public event Action<int> AttackEvent;
+        public System.Windows.Forms.PictureBox pictureBox;
 
-    public BattleCharacter(Vector2 initPos, Collider collider, string charName, string charAttackName) : base(initPos, collider) {
+    public BattleCharacter(Vector2 initPos, Collider collider, string charName, string charAttackName, System.Windows.Forms.PictureBox pictureBox = null) : base(initPos, collider) {
       Random rnd = new Random();
       strength = rnd.Next(1, 3);
       MaxHealth = rnd.Next(10, 20);
       Health = MaxHealth;
       characterName = charName;
       attackName = charAttackName;
-    }
+            this.pictureBox = pictureBox;
+        }
 
-    //character processing when a character loses in battle depends on the character type (player or enemy)
-    public abstract void HandleLostInBattle();
+        //character processing when a character loses in battle depends on the character type (player or enemy)
+        public abstract void HandleLostInBattle();
 
     public void OnAttack(int amount) {
       AttackEvent((int)(amount * strength));

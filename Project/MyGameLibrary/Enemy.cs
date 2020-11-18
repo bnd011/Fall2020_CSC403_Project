@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using System.Windows.Forms;
 
 namespace Fall2020_CSC403_Project.code {
   /// <summary>
@@ -26,7 +27,7 @@ namespace Fall2020_CSC403_Project.code {
     /// <param name="collider">this is the collider for the enemy</param>
     /// <param name="charName">the name of this character</param>
     /// <param name="charAttackName">each char has one move, this is its name</param>
-    public Enemy(Vector2 initPos, Collider collider, string charName, string charAttackName) : base(initPos, collider, charName, charAttackName) {
+    public Enemy(Vector2 initPos, Collider collider, string charName, string charAttackName, PictureBox pictureBox) : base(initPos, collider, charName, charAttackName, pictureBox) {
     }
 
     //when an enemy loses in battle, that instance should be removed and an event triggered to notify other systems

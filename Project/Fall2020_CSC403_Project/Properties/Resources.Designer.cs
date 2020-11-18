@@ -122,19 +122,9 @@ namespace Fall2020_CSC403_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap enemy_poisonpacket {
-            get {
-                object obj = ResourceManager.GetObject("enemy_poisonpacket", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap enemy_poisonpacket_fw {
             get {
-                object obj = ResourceManager.GetObject("enemy_poisonpacket.fw", resourceCulture);
+                object obj = ResourceManager.GetObject("enemy_poisonpacket_fw", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -171,9 +161,9 @@ namespace Fall2020_CSC403_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap layout0 {
+        internal static System.Drawing.Bitmap fire {
             get {
-                object obj = ResourceManager.GetObject("layout0", resourceCulture);
+                object obj = ResourceManager.GetObject("fire", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -181,39 +171,9 @@ namespace Fall2020_CSC403_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap layout1 {
+        internal static System.Drawing.Bitmap fire_crossbones {
             get {
-                object obj = ResourceManager.GetObject("layout1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap layout2 {
-            get {
-                object obj = ResourceManager.GetObject("layout2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap layout3 {
-            get {
-                object obj = ResourceManager.GetObject("layout3", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap layout4 {
-            get {
-                object obj = ResourceManager.GetObject("layout4", resourceCulture);
+                object obj = ResourceManager.GetObject("fire_crossbones", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -291,6 +251,56 @@ namespace Fall2020_CSC403_Project.Properties {
         internal static System.Drawing.Bitmap koolaid {
             get {
                 object obj = ResourceManager.GetObject("koolaid", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap layout0 {
+            get {
+                object obj = ResourceManager.GetObject("layout0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap layout1 {
+            get {
+                object obj = ResourceManager.GetObject("layout1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap layout2 {
+            get {
+                object obj = ResourceManager.GetObject("layout2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap layout3 {
+            get {
+                object obj = ResourceManager.GetObject("layout3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap layout4 {
+            get {
+                object obj = ResourceManager.GetObject("layout4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
